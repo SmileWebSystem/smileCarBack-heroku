@@ -1,6 +1,6 @@
-package com.example.services;
+package com.smile.car.services;
 
-import com.example.models.Time;
+import com.smile.car.dtos.Time;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

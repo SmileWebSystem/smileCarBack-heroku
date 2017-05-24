@@ -1,6 +1,6 @@
-package com.example.services;
+package com.smile.car.services;
 
-import com.example.models.Time;
+import com.smile.car.dtos.Time;
 import com.smile.car.carsmileImpl.AnalisisVehiculoEJB;
 import com.smile.car.dtos.RespuestaDto;
 

@@ -1,5 +1,6 @@
 package com.example.models;
 
+import com.smile.car.dtos.Time;
 import org.junit.Test;
 
 import java.util.TimeZone;

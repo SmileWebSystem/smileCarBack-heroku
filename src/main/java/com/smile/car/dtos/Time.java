@@ -1,4 +1,4 @@
-package com.example.models;
+package com.smile.car.dtos;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Calendar;
