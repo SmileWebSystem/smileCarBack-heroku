@@ -1,7 +1,6 @@
 package com.smile.car.services;
 
-import com.smile.car.dtos.Time;
-import com.smile.car.carsmileImpl.AnalisisVehiculoEJB;
+import com.smile.car.carsmileImpl.AnalisisVehiculo;
 import com.smile.car.dtos.RespuestaDto;
 
 import javax.ws.rs.GET;
@@ -24,17 +23,12 @@ public class CarService {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("estudio/{placa}")
     public Response estudio(@PathParam("placa")String placa) {
-        AnalisisVehiculoEJB analisisVehiculo = new AnalisisVehiculoEJB();
+        AnalisisVehiculo analisisVehiculo = new AnalisisVehiculo();
         Response response = null;
         RespuestaDto respuestaDto = analisisVehiculo.analizarPlaca(placa);         
         response = Response.status(200).entity(respuestaDto).build();
         
         return response;
-    }
-
-    @GET
-    public Time get() {
-        return new Time();
     }
 
 }

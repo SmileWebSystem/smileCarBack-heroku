@@ -27,7 +27,7 @@ import java.util.logging.Logger;
  *
  * @author lvalbuena
  */
-public class AnalisisVehiculoEJB {
+public class AnalisisVehiculo {
     
     /**
      * Cliente web que obtiene toda la informacion del vehiculo
@@ -35,7 +35,7 @@ public class AnalisisVehiculoEJB {
     private FasecoldaClient fasecoldaClient;
     
     
-    public AnalisisVehiculoEJB() {
+    public AnalisisVehiculo() {
         fasecoldaClient = new FasecoldaClient();
     }
 
@@ -63,7 +63,7 @@ public class AnalisisVehiculoEJB {
                 respuestaDto.setComparendoList(this.obtenerComparendos(respType.getData().getSIMITSisa()));
             }            
         } catch (PolizasExceptionFault ex) {
-            Logger.getLogger(AnalisisVehiculoEJB.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AnalisisVehiculo.class.getName()).log(Level.SEVERE, null, ex);
         }
         return respuestaDto;
     }
