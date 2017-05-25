@@ -29,30 +29,30 @@
     
     
     
-    <filter>
+<!--    <filter>
         <filter-name>CORS</filter-name>
         <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
-        <!-- Domaines autorisés, séparés par des virgules, par ex. : <param-value>http://perdu.com http://something.com</param-value> -->
+         Domaines autorisés, séparés par des virgules, par ex. : <param-value>http://perdu.com http://something.com</param-value> 
         <init-param>
             <param-name>cors.allowOrigin</param-name>
             <param-value>*</param-value>
         </init-param>
-        <!-- Méthodes HTTP autorisées, configurées ici pour REST -->
+         Méthodes HTTP autorisées, configurées ici pour REST 
         <init-param>
             <param-name>cors.supportedMethods</param-name>
             <param-value>GET, POST, HEAD, PUT, DELETE</param-value>
         </init-param>
     </filter>
-    <!-- Associe le filtre CORS au servlet JAXServlet -->
+     Associe le filtre CORS au servlet JAXServlet 
     <filter-mapping>
         <filter-name>CORS</filter-name>
         <servlet-name>JAXServlet</servlet-name>
     </filter-mapping>
-    <!-- Associes le filtre CORS aux URLs spécifiées, cet URL étant géré par le servlet -->
+     Associes le filtre CORS aux URLs spécifiées, cet URL étant géré par le servlet 
     <filter-mapping>
         <filter-name>CORS</filter-name>
         <url-pattern>/services/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
   
     
 
