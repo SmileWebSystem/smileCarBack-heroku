@@ -20,19 +20,12 @@ public class CarService {
      * @return 
      */
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     @Path("estudio/{placa}")
     public Response estudio(@PathParam("placa")String placa) {
         AnalisisVehiculo analisisVehiculo = new AnalisisVehiculo();
         Response response = null;
         RespuestaDto respuestaDto = analisisVehiculo.analizarPlaca(placa);         
-        response = Response.status(200)
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
-                .header("Access-Control-Allow-Credentials", "true")
-                .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
-                .header("Access-Control-Max-Age", "1209600")
-                .entity(respuestaDto).build();
+        response = Response.status(200).entity(respuestaDto).build();
         return response;
     }
 
