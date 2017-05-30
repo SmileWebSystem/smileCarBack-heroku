@@ -19,7 +19,9 @@ import com.smile.clientWS.fasecolda.HistoricoSiniestroSisaOutType;
 import com.smile.clientWS.fasecolda.PolizasExceptionFault;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -85,6 +87,12 @@ public class AnalisisVehiculo {
             propietarioDto.setTipoDocumento(polizaOut.getTipoDocumentoAsegurado());
             propietarios.add(propietarioDto);
         }
+        
+        //se eliminan los repetidos (igual numero de documento)
+        Set<PropietarioDto> uniqueElements = new HashSet<PropietarioDto>(propietarios);
+        propietarios.clear();
+        propietarios.addAll(uniqueElements);
+        
         return propietarios;
     }
     

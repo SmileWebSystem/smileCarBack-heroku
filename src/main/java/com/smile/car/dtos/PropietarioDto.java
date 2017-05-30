@@ -48,6 +48,20 @@ public class PropietarioDto {
         this.nombre = nombre;
     }
     
+    @Override
+    public int hashCode() {
+        return numeroDocumento.hashCode() ^ 3;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof PropietarioDto))
+            return false;
+
+        PropietarioDto pro = (PropietarioDto) obj;
+        return pro.getNumeroDocumento().equals(this.numeroDocumento);
+    }
+    
     
     
 }
